@@ -1,0 +1,76 @@
+{
+	"presets": [
+		"react",
+		[
+			"env",
+			{
+				"targets": {
+					"node": "current"
+				}
+			}
+		]
+	],
+
+ 	"plugins": [
+
+ 		"add-module-exports",
+ 		"transform-object-rest-spread", 
+ 		"transform-decorators-legacy",
+ 		"transform-html-import-to-string",
+ 		"transform-export-extensions",
+ 		"transform-remove-strict-mode",
+
+ 		[
+ 			"babel-plugin-inline-import",
+ 			{
+ 				"extensions": [".json"]
+ 			}
+ 		],
+
+ 		[
+ 			"module-resolver",
+ 			{	
+ 				"alias": {
+ 					"common": "./common",
+ 					"app": "./app"
+ 				}
+ 			}
+ 		]
+
+ 	],
+
+ 	"env": {
+
+ 		"server": {
+
+ 			"plugins": [
+
+ 				[
+ 					"css-modules-transform",
+ 					{
+ 						"generateScopedName": "[hash:base64:5]",
+                        "extensions": [".scss"],
+                        "devMode": true,
+                        "resolve": {
+	                        "alias": {
+								"common": "ROOT/common",
+								"app": "ROOT/app"
+			 				}
+		 				}
+ 					}
+ 				],
+
+		 		[
+		          "babel-plugin-transform-require-ignore",
+		          {
+		            "extensions": [".css"]
+		          }
+		        ]
+
+ 			]
+
+ 		}
+
+ 	}
+
+}
