@@ -79,7 +79,7 @@
     "concurrently": "^4.1.2",
     "debug": "2.6.8",
     "exenv": "^1.2.2",
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "express-sslify": "^1.2.0",
     "feathers-hooks-common": "^4.11.1",
     "feathers-sequelize": "^3.1.0",
